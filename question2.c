@@ -1,11 +1,6 @@
 #include "tm4c123gh6pm.h"
 
 void PortC_init (void){
-	SYSCTL_RCGCGPIO_R |=0x02;
-	GPIO_PORTF_DIR_R |=0x0E;
-	GPIO_PORTC_DEN_R |=0x0E;
-	//
-
 SYSCTL_RCGC2_R |= 0x04; // 1) activate Port C
 
 GPIO_PORTC_LOCK_R = 0x4C4F434B; 
